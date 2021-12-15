@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final</title>
+    <style>
+        #screen{
+            display: flex;
+            width: 600px;
+            border: 1px solid grey;
+            margin: 0 auto;
+            display: flex;
+            flex-grow: 1;
+        }
+        .board{
+            border: 1px black solid;
+            display: block;
+            
+        }
+        .left{
+            background-color: #ece8e8;
+            text-align: left;
+            border: 1px solid grey;
+            padding-bottom: 5px;
+            padding-top: 10px;
+        }
+        .color{
+            text-align: center;
+        }
+        .color button{
+            display: inline-block;
+            border: 1px solid #00000026;
+            cursor: pointer;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            margin-bottom: 5px;
+        }
+        .color button:nth-of-type(1) {
+            background-color: #0000ff;
+        }
+        .color button:nth-of-type(2) {
+            background-color: #ff0000;
+        }
+        .color button:nth-of-type(3) {
+            background-color: #009933;
+        }
+        .color button:nth-of-type(4) {
+            background-color: #ff00ff;
+        }
+        .color button:nth-of-type(5) {
+            background-color: #000000;
+        }
+        .color button:nth-of-type(6) {
+            background-color: #996633;
+        }
+        .color button:nth-of-type(7) {
+            background-color: #2E4053;
+        }
+        .color button:nth-of-type(8) {
+            background-color: #E67E22;
+        }
+        .color button:nth-of-type(9) {
+            background-color: #145A32;
+        }
+        .color button:nth-of-type(10) {
+            background-color: #3498DB;
+        }
+        .color button:nth-of-type(11) {
+            background-color: #6C3483;
+        }
+        .color button:nth-of-type(12) {
+            background-color: #F1C40F;
+        }
+        .slider{
+            margin-left: 30%;
+        }
+        .eraser{
+            cursor: pointer;
+            text-align: center;
+        }
+        .clear{
+            height: 80px;
+            width: 100px;
+            margin-top: 180%;
+        }
+        .download{
+            height: 80px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <input type="range" class="size-value" min="1" max="50" value="1">
+        <label class="range-value">1</label>px
+    </div>
+    <div id="screen">
+        <div class="left">
+            <div class="color">
+                <button type="button" value="#0000ff"></button>
+                <button type="button" value="#ff0000"></button>
+                <button type="button" value="#009933"></button>
+                <button type="button" value="#ff00ff"></button>
+                <button type="button" value="#000000"></button>
+                <button type="button" value="#996633"></button>
+                <button type="button" value="#2E4053"></button>
+                <button type="button" value="#E67E22"></button>
+                <button type="button" value="#145A32"></button>
+                <button type="button" value="#3498DB"></button>
+                <button type="button" value="#6C3483"></button>
+                <button type="button" value="#F1C40F"></button>
+            </div>
+            <div class="eraser">
+                <input type="image" src="eraser.png" width="50px" />
+            </div>
+            <button type="button" class="clear">Clear</button>
+            <button type="button" class="download">Download</button>
+        </div>
+        <canvas class="board" width="500px" height="500px"></canvas>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
