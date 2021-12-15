@@ -14,6 +14,7 @@ let clear=document.querySelector(".clear");
 let download=document.querySelector(".download");
 
 context.fillStyle="white";
+context.fillRect(0, 0, canvas.width, canvas.height);
 
 download.addEventListener("click", function() {
     let canvasDataURL = canvas.toDataURL();
@@ -25,6 +26,8 @@ download.addEventListener("click", function() {
 
 clear.addEventListener('click', function(){
     context.clearRect(0, 0, canvas.width, canvas.height);
+    context.fillStyle="white";
+    context.fillRect(0, 0, canvas.width, canvas.height);
 });
 
 eraser.addEventListener("click", event=>{
