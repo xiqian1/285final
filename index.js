@@ -13,6 +13,8 @@ let clear=document.querySelector(".clear");
 
 let download=document.querySelector(".download");
 
+context.fillStyle="white";
+
 download.addEventListener("click", function() {
     let canvasDataURL = canvas.toDataURL();
     let a = document.createElement('a');
